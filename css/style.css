@@ -1,0 +1,35 @@
+.mon_carousel .fond
+{
+    background: url('././../images/monfond.jpg') no-repeat center;
+    height: 500px;
+    background-size: cover;
+    width: 100%;
+    margin: 0;
+}
+.image{
+    background: url('./../images/pourquoi.png') no-repeat center;
+    width: 300px;
+    background-size: cover;
+    height: 300px;
+    
+}
+
+
+.text-italic{
+    font-style: italic;
+    font-weight: bold;
+}
+.service .container .row .card .card-body .card-text img:hover{
+    box-shadow: 0px 0px 30px 5px rgba(22, 141, 189,0.45);
+    border-radius: 50px;
+    transition: 2s ease-in-out;
+}
+.article{
+    padding-top: 100px;
+}
+footer{
+    background: rgb(15, 15, 15);
+    
+    width: 100%;
+    margin-top: 100px;
+}

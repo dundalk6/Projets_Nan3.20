@@ -1,0 +1,239 @@
+#reservation-form{
+   border: 3px solid rgba(255, 255, 255, 0.801);
+   border-top-left-radius: 15px;
+   border-bottom-left-radius: 15px;
+   background: #00122c98;
+   height: 200px;
+   width: 100%;
+   box-shadow: 2px 2px 8px black;
+}
+form h3{
+   text-shadow:2px 1px black;
+   text-align: left;
+   padding-top: 50px;
+   text-transform: uppercase;
+}
+
+#reservation-form .form-control{
+    background: transparent;
+}
+
+.monbouton:hover{
+     background-color: rgba(255, 255, 255, 0.401) !important;
+     border: 2px solid red;
+}
+
+ul#menu {
+  padding: 0;
+  margin: 0;
+  -moz-perspective: 780px;
+  -webkit-perspective: 780px;
+  perspective: 780px;
+  background-color: transparent;
+}
+
+ul#menu li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+ul#menu li {
+  text-indent: -9999px;
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 159px;
+  margin-right: -80px;
+  margin-left: 15px;
+  -moz-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: 50;
+  -moz-transform: rotateY(45deg);
+  -webkit-transform: rotateY(45deg);
+  transform: rotateY(45deg);
+  -moz-transition: all .45s;
+  -webkit-transition: all .45s;
+  transition: all .45s;
+  opacity: .8;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 0 30px rgba(0,0,0,0.2);
+}
+
+ul#menu li:last-child,
+ul#menu li:first-child { z-index: 45; }
+
+ul#menu li:nth-child(2),
+ul#menu li:nth-child(5) { z-index: 46; }
+
+ul#menu li:nth-child(3) { z-index: 51; }
+
+ul#menu li.highlighted {
+  -moz-transform: rotateY(0deg) scale(1.2);
+  -webkit-transform: rotateY(0deg) scale(1.2);
+  transform: rotateY(0deg) scale(1.2);
+  z-index: 55!important;
+}
+
+ul#menu .highlighted ~ li {
+  -moz-transform: rotateY(-45deg);
+  -webkit-transform: rotateY(-45deg);
+  transform: rotateY(-45deg);
+}
+
+ul#menu li:hover,
+ul#menu li:first-child:hover,
+ul#menu li.highlighted ~ li:hover { z-index: 60!important; }
+
+ul#menu li:hover {
+  -moz-transform: rotateY(0deg) scale(1.2);
+  -webkit-transform: rotateY(0deg) scale(1.2);
+  transform: rotateY(0deg) scale(1.2);
+  opacity: 1;
+}
+
+ul#menu li:hover ~ li {
+  -moz-transform: rotateY(-45deg);
+  -webkit-transform: rotateY(-45deg);
+  transform: rotateY(-45deg);
+}
+
+ul#menu:hover li:not(:hover) {
+  -moz-transform: rotateY(45deg);
+  -webkit-transform: rotateY(45deg);
+  transform: rotateY(45deg);
+}
+
+ul#menu:hover li:hover ~ li {
+  -moz-transform: rotateY(-45deg);
+  -webkit-transform: rotateY(-45deg);
+  transform: rotateY(-45deg);
+}
+
+ul#menu:not(:hover) li.highlighted { opacity: 1; }
+
+ul#menu li:nth-child(1) { background-image: url(../icone/confort2.png); }
+
+ul#menu li:nth-child(2) { background-image: url(../icone/efficace3.png); }
+
+ul#menu li:nth-child(3) { background-image: url(../icone/securite1.png); }
+
+ul#menu li:nth-child(4) { background-image: url(../icone/serviable.png); }
+
+ul#menu li:nth-child(5) { background-image: url(../icone/confiance.png); }
+
+
+ul#menu li:after {
+  content: "";
+  width: 200px;
+  height: 20px;
+  background: rgba(255,255,255,.5);
+  /*background-image: url(tables.jpg);
+	-moz-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+	-webkit-transform: rotateZ(180deg);
+	transform: rotateZ(180deg);*/
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  -webkit-mask-image: -webkit-gradient(linear, left 10%, left bottom, from(rgba(0,0,0,.5)), to(rgba(0,0,0,0)));
+}
+.paralax{
+    background-attachment: fixed;
+    top: 0;
+    bottom: 0;
+    background-position: center;
+    background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('./../images/fd03.jpg') no-repeat center center; 
+    background-size: cover;
+    height: 400px;
+}
+.paralax-text{
+    padding-top: 30px;
+    width: 700px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.85);
+    margin-top: 50px;
+    border-radius: 5px;
+}
+.text-italic{
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+.bg {
+  /* background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('./../images/pexels-photo-2373201.jpeg')no-repeat scroll center 0/cover; */
+  min-height: 400px;
+  padding-top: 100px;
+  margin-bottom: 100px;
+  
+}
+
+.parallax{
+    background-attachment: fixed;
+     background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)), url('./../images/fd03.jpg')no-repeat scroll center 0/cover;
+    z-index: -1;
+    height: 100vh;
+}
+.parallax-text{
+    color: #fff;
+    
+    margin-top: 50px;
+    border-radius: 5px;
+}
+.parallax-text h2{
+    font-size: 45px;
+}
+.parallax-text p{
+    font-size: 25px;
+    color: rgb(160, 160, 160)
+}
+.parallax_item{
+    border: 1px solid #777777;
+  border-radius: 10px;
+  background-color: rgba(249, 249, 255, 0.102);
+  padding: 31px 40px 37px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.f-slideimg1{
+    background-image: url('../images/UBA-section-inner-page-partnership.jpg');
+    
+}.f-slideimg2{
+    background-image: url('../images/welcome2__uba.jpg');
+    
+}.f-slideimg3{
+    background-image: url('../images/uba_house.jpg');
+    
+}
+.f-commun{
+    height: 400px ; width: 708px;
+    background-size: cover;
+    background-position: center;
+}
+
+#tm {
+    display: flex !important;
+}
+.f-contenu{
+    padding-left: 20px;
+    width: 500px;
+    height: 400px;
+    background: #fff;
+    position: absolute;
+    margin-left: 519px;
+    margin-top: -400px
+}
+.f-contenu h1{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.footer-widget h4{
+    color: #fff;
+}
