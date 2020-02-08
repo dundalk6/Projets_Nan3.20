@@ -9,5 +9,5 @@ if (isset($_GET['id']) AND $_GET['id'] > 0)
 	$requser = $bdd->prepare('SELECT * FROM membres WHERE id = ?');
 	$requser->execute(array($getid));
 	$userinfo = $requser->fetch();
-
+ }
 ?>

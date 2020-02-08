@@ -1,6 +1,6 @@
 <?php
 session_start();
-$bdd = NEW PDO('mysql:host=127.0.0.1;dbname=db_ecam','root','');
+require '../includes/database.php';
 if (isset($_GET['id']) AND $_GET['id'] > 0)
  {
 	$getid = intval($_GET['id']);
@@ -53,7 +53,7 @@ if (isset($_GET['id']) AND $_GET['id'] > 0)
 				<form class="login100-form validate-form" method="POST">
 
 					<div class="wrap-input100 validate-input m-b-18">
-						<span class="label-input100">Pseudo : </span>
+						<span class="label-input100">Image : </span>
 						<?php
 							if (!empty($userinfo['avatar'])) {
 						?>

@@ -1,35 +1,192 @@
-.mon_carousel .fond
+/* ---------------------------- Ma Navbar --------------------------------- */
+
+#monMenu .navbar{
+    box-shadow: 2px 2px 8px black;
+}
+
+#monMenu .navbar .container{
+    padding: 20px 0 ;
+}
+
+.active{
+    border-top: 2px solid #d9534f;
+    transition: 3s all;
+}
+
+/* ------------ Caroussel & Text ---------------- */
+
+.carousel-caption .content-text
 {
-    background: url('././../images/monfond.jpg') no-repeat center;
-    height: 500px;
-    background-size: cover;
-    width: 100%;
-    margin: 0;
+    margin-top: -400px;
 }
-.image{
-    background: url('./../images/pourquoi.png') no-repeat center;
-    width: 300px;
-    background-size: cover;
-    height: 300px;
-    
+.carousel-caption .content-text h1
+{
+    text-transform: uppercase;
+    font-size: 45px;
+    text-shadow: 2px 2px 8px #000;
+}
+.carousel-caption .content-text h3
+{
+    text-transform: capitalize;
+    font-size: 35px;
+    text-shadow: 2px 2px 8px #000;
+}
+.carousel-caption .content-text .btn
+{
+    margin-top: 50px;
+    width: 200px;
+    height: 50px;
+    padding-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 8px #000;
+}
+.carousel-caption .content-text .btn2
+{
+    border: 2px solid ;
+}
+.carousel-caption .content-text .btn1:hover
+{
+    background: #337ab7;
+    border: 2px solid ;
+}
+.carousel-caption .content-text .btn2:hover
+{
+    background: #d9534f;
 }
 
+/* --------------- Pourquoi nous ------------------- */
 
-.text-italic{
-    font-style: italic;
-    font-weight: bold;
-}
-.service .container .row .card .card-body .card-text img:hover{
-    box-shadow: 0px 0px 30px 5px rgba(22, 141, 189,0.45);
-    border-radius: 50px;
-    transition: 2s ease-in-out;
-}
-.article{
-    padding-top: 100px;
-}
-footer{
-    background: rgb(15, 15, 15);
-    
-    width: 100%;
+.whyus .container .content-flip
+{
     margin-top: 100px;
+    margin-left: -50px;
+    margin-bottom: 100px;
+}
+.whyus .container h2
+{
+    margin-top: 100px;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: left;
+}
+.whyus .container h3
+{
+    color: #777;
+    margin-top: 20px;
+    text-transform: capitalize;
+    font-size: 20px;
+    text-align: left;
+}
+.trait
+{
+    width: 120px;
+    height: 4px;
+    background: #d9534f;
+    position: absolute;
+    left: 30%;
+    top: 118%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    content: "";
+}
+@media screen and (max-width : 1280px)
+{
+    .trait
+    {
+        width: 120px;
+        height: 4px;
+        background: #d9534f;
+        position: absolute;
+        left: 60%;
+        top: 118%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        content: "";
+    }
+    ul#menu li 
+    {
+        
+        text-indent: -9999px;
+        position: relative;
+        display: inline-block;
+        width: 200px;
+        height: 159px;
+        margin-right: 0px;
+        padding-left: 50px;
+        margin-left: -5px;
+        left: 30px;
+        -moz-background-size: contain;
+        -webkit-background-size: contain;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        z-index: 50;
+        -moz-transform: rotateY(45deg);
+        -webkit-transform: rotateY(45deg);
+        transform: rotateY(45deg);
+        -moz-transition: all .45s;
+        -webkit-transition: all .45s;
+        transition: all .45s;
+        opacity: .8;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 0 30px rgba(0,0,0,0.2);
+
+    }
+    .service
+    {
+        background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('./../img/fd03.jpg') no-repeat center center; 
+        
+        background-attachment: fixed;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        color: #fff;
+    }
+}
+
+/* ---------Services---------- */
+
+.service
+{
+    background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('./../img/fd03.jpg') no-repeat center center; 
+    
+    background-attachment: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    color: #fff;
+    margin-bottom: 100px;
+}
+.service .container
+{
+    padding-top: 20px;
+}
+.service h2
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+.service h3
+{
+    color: rgba(255, 255, 255, 0.548);
+    font-size: 20px;
+}
+.service_item
+{
+    border: 1px solid #777777;
+  border-radius: 10px;
+  background-color: rgba(249, 249, 255, 0.102);
+  padding: 31px 40px 37px;
+  color: #fff;
+  margin-bottom: 30px;
 }

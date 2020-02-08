@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'config.php';
+require '../includes/database.php';
 
 if (isset($_POST['ok'])) 
 {
@@ -22,7 +22,7 @@ if (isset($_POST['ok']))
 			$_SESSION['pseudo'] = $userInfo['pseudo'];
 			$_SESSION['mail'] = $userInfo['mail'];
 
-			header("location: ../Dashboard/index.php?id=".$_SESSION['id']);
+			header("location: Tableau-Bord/index.php?id=".$_SESSION['id']);
 		}
 		else
 		{

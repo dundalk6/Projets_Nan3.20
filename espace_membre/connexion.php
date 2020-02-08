@@ -38,7 +38,7 @@ include 'script/connexion.php';
 			<div class="wrap-login100">
 				<div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
 					<span class="login100-form-title-1">
-						Se Connecter
+						Se Connecter a Yediminh Dashboard
 					</span>
 				</div>
 				

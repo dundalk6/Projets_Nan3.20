@@ -1,6 +1,6 @@
 <?php
 
-require 'script.php';
+require 'script/reservation.php';
 
 ?>
 <!DOCTYPE html>
@@ -9,18 +9,24 @@ require 'script.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
-    <script src="bs/js/bootstrap.min.js"></script>
-    <script src="bs/js/jquery-3.4.1.js"></script>
-    <link rel="stylesheet" href="bs/fonts/glyphicons-halflings-regular.eot">
-    <link rel="stylesheet" href="bs/fonts/glyphicons-halflings-regular.svg">
-    <link rel="stylesheet" href="bs/fonts/glyphicons-halflings-regular.ttf">
-    <link rel="stylesheet" href="bs/fonts/glyphicons-halflings-regular.woff">
-    <link rel="stylesheet" href="bs/fonts/glyphicons-halflings-regular.woff2">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="bootstrap/fonts/glyphicons-halflings-regular.eot">
+    <link rel="stylesheet" href="bootstrap/fonts/glyphicons-halflings-regular.svg">
+    <link rel="stylesheet" href="bootstrap/fonts/glyphicons-halflings-regular.ttf">
+    <link rel="stylesheet" href="bootstrap/fonts/glyphicons-halflings-regular.woff">
+    <link rel="stylesheet" href="bootstrap/fonts/glyphicons-halflings-regular.woff2">
+    <link rel="stylesheet" href="css/design.css">
+
+    <link rel="stylesheet" href="bootstrap/css/font-awesome.min.css" type="text/css">
+    
+    <link rel="stylesheet" href="bootstrap/css/themify-icons.css" type="text/css">
+
     <link rel="stylesheet" href="carou.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="animate/animate.min.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <!-- <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="animate/animate.min.css"> -->
     <!-- Bootstrap css -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -30,7 +36,7 @@ require 'script.php';
     <title>YEDIMINH-POOL</title>
 </head>
 <body>
-   <div class="navbar-wrapper">
+   <div id="monMenu" class="navbar-wrapper">
       <div class="fond">
 
         <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -42,27 +48,27 @@ require 'script.php';
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.php">
-                <img class="navbar-brand" style="width:200px; height:80px; margin-top:-27px" src="icone/mon-lo.png" alt="">
+              <a class="navbar-brand" href="#">
+                <img class="navbar-brand" style="width:200px; height:80px; margin-top:-27px" src="icones/mon-lo.png" alt="">
               </a>
             </div>
             <div id="navbar" style="margin-right:15px" class="navbar-collapse navbar-right collapse text-uppercase">
               <ul class="nav navbar-nav">
-                <li class="home"><a href="index.php">Accueil</a></li>
+                <li><a href="index.php">Accueil</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="formation.php">Natation</a></li>
+                    <li><a href="natation.php">Natation</a></li>
                     <li><a href="hotel.php">Hotel</a></li>
-                    <li><a href="restau.php">Restaurant</a></li>
+                    <li><a href="restaurant.php">Restaurant</a></li>
                     <li><a href="spa.php">Spa</a></li>
                   </ul>
                 </li>
                 <!-- <li><a href="#about">Services</a></li> -->
-                <li><a href="article.php">Actus-News</a></li>
+                <li><a href="news.php">Actus-News</a></li>
                 
                 <li><a href="galerie.php">Galerie</a></li>
-                <li class="active"><a  href="reservation.php" > Reservation</a></li>
+                <li class="active active1"><a href="reservation.php" > Reservation</a></li>
               </ul>
             </div>
           </div>
@@ -79,165 +85,295 @@ require 'script.php';
 
     </div> -->
 
-    <div id="myCarousel" class="mon_carou animated bounce" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
-    <div style="background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('images/reserv.jpg') no-repeat center;
-    height: 500px;
-    background-size: cover;
-    width: 100%;
-    margin: 0;" class="fond">
-    <div class="container">
-      <h2 class="text-center" style="padding-top: 200px;margin: 0; font-size: 90px; color: #fff">Reservation</h2>
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active animated  wobble">
+        <img src="slide/slide3.jpg" alt="Los Angeles" style="width:100%; height:100vh">
+        
+            <div  class="carousel-caption">
+
+                <div class="content-text text-center">
+                
+                <h1>Un Esprit Libre d'aventure.</h1>
+                <h3>Venez vous évader chez nous.</h3>
+                <a class="btn btn-danger btn1" href="reservation.php">Reserver</a>
+                  <a class="btn btn-primary btn2" href="natation.php">Formation</a>
+                
+              </div>
+              
+            </div>
+        
+      </div>
+
+      <div class="item animated  zoomIn">
+        <img src="slide/slide1.JPEG" alt="Chicago" style="width:100%;height:100vh">
+            <div  class="carousel-caption">
+              <div class="content-text text-center">
+                  
+                  <h1>Reposez-vous et liberez vous de tout.</h1>
+                  <h3>akuna matata.</h3>
+                  <a class="btn btn-danger btn1" href="hotel.php">Nos Chambres</a>
+                </div>
+              
+              
+            </div>
+            
+      </div>
+    
+      <div class="item animated  bounce">
+        <img src="slide/slide2.jpg" alt="New york" style="width:100%;height:100vh">
+
+              <div  class="carousel-caption">
+
+                  <div class="content-text text-center">
+                    
+                    <h1>Sans soucis, ataraxie totale.</h1>
+                    <h3>sentez vous bien dans votre peau.</h3>
+                    <a class="btn btn-primary btn2" href="spa.php">Visiter le Spa</a>
+                  </div>
+              
+            </div>
+      </div>
     </div>
-      
-    </div>
-    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 
     <!-- Fin du caroussel -->
-
-    <!-- Pourquoi-nous -->
-
-    <div class="about">
-        <div class="container">
-            <div class="row">
-              <h2 class="text-center animated  wobble ">Reservation </h2>
-              <hr>
-                
-                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+    <div class="type">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="type_item text-center">
+                <div class="type_img">
+                    <img style="width:100%;" src="img/fd2.JPEG" alt="">
                     
-                    <form action="" method="POST">
-                                                <div class="form-row">
-                                                    <div class="form-group col-lg-6 col-md-6">
-                                                        <label for="inputEmail4">Nom</label>
-                                                        <input name="nom" type="text" class="form-control" id="inputEmail4" placeholder="" required="">
-                                                    </div>
-                                                    <div class="form-group col-lg-6 col-md-6">
-                                                        <label for="inputPassword4">Prenom</label>
-                                                        <input name="prenom" type="text" class="form-control" id="inputPassword4" placeholder="" required="">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group col-lg-6 col-md-6">
-                                                    <label for="inputAddress">Mail</label>
-                                                    <input name="mail" type="mail" class="form-control" id="inputAddress" placeholder="" required="">
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="form-group col-lg-3 col-md-3">
-                                                        <label for="inputAddress2">Reservation</label>
-                                                        <select name="fonction" class="form-control">
-                                                            <option>Complète</option>
-                                                            <option>Mini</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group col-lg-3 col-md-3">
-                                                        <label for="inputCity">Début</label>
-                                                        <input name="date" type="date" class="form-control" id="inputCity" required="">
-                                                    </div>
-                                                    <div class="form-group col-lg-6 col-md-6">
-                                                        <label for="inputCity">Fin</label>
-                                                        <input name="fin" type="date" class="form-control" id="inputCity" required="">
-                                                    </div>
-                                                    <div class="form-group col-lg-6 col-md-6">
-                                                        <label for="inputZip">Contact</label>
-                                                        <input name="contact" type="text" class="form-control" id="inputZip" required="">
-                                                    </div>
-                                                
-                                                 </div>
-                                                 <div class="form-group col-xs-12 lg text-center">
-                                                   <button name="ok" type="submit" class="btn btn-success">Enregistrer</button>
-                                                 </div>
-                                                
-
-                                                
-                                            </form>
-                                            <p style="color:blue" class='text-muted m-b-10'>
-                                                        <?php
-
-                                                            if (isset($erreur)) 
-                                                            {
-                                                                echo $erreur ;
-                                                            }
-
-                                                        ?>
-                                                        </p>
-                    
+                </div>
                   
-                </div>
-                
             </div>
-            
+          </div>
+          <div class="col-lg-6">
+              <div class="cotainer-text text-center">
+                <h3>Reservation Complète</h3>
+                <hr>
+                <hr>
+                <ul class="text-left">
+                  <li>Natation <i style="color:orange" class="fa fa-check"></i></li>
+                  <li>Spa <i style="color:orange" class="fa fa-check"></i></li>
+                  <li>Restaurant <i style="color:orange" class="fa fa-check"></i></li>
+                  <li>Tourisme <i style="color:orange" class="fa fa-check"></i></li>
+                  <li>Hôtel-Chambres <i style="color:orange" class="fa fa-check"></i></li>
+                  <li>Hôtel-Suites <i style="color:orange" class="fa fa-check"></i></li>
+                  <li>Massage <i style="color:orange" class="fa fa-check"></i></li>
+                  <li>Compétition & Activités extras <i style="color:orange" class="fa fa-check"></i></li>
+                  <li>Diner entre Amoureux tous les samedi soir <i style="color:orange" class="fa fa-check"></i></li>
+                </ul>
+                <hr>
+                <hr>
+              </div>
+          </div>
         </div>
+        <div class="row">
+          
+          <div class="col-lg-6">
+              <div class="cotainer-text text-center">
+                <h3>Reservation Mini</h3>
+                <hr>
+                <hr>
+                <ul class="text-left">
+                  <li>Natation <i style="color:orange" class="fa fa-check"></i></li>
+                  <li>Spa <i style="color:red" class="fa fa-times"></i></li>
+                  <li>Restaurant <i style="color:red" class="fa fa-times"></i> A vos frais <i style="color:orange" class="fa fa-check"></i></li>
+                  <li>Tourisme <i style="color:red" class="fa fa-times"></i></li>
+                  <li>Hôtel-Chambres <i style="color:orange" class="fa fa-check"></i></li>
+                  <li>Hôtel-Suites <i style="color:red" class="fa fa-times"></i></li>
+                  <li>Massage <i style="color:orange" class="fa fa-check"></i></li>
+                  <li>Compétition & Activités extras <i style="color:red" class="fa fa-times"></i></li>
+                  <li>Diner entre Amoureux tous les samedi soir <i style="color:orange" class="fa fa-check"></i></li>
+                </ul>
+                <hr>
+                <hr>
+              </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="type_item text-center">
+                <div class="type_img">
+                    <img style="width:100%;" src="img/art1.JPEG" alt="">
+                    
+                </div>
+                  
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-<hr>
-    <!-- Fin Pourquoi-nous -->
-    <!-- mon effet parallaxe -->
-    
-    <!-- Fin Contact & Newsletter -->
-    <footer class="footer-section set-bg" data-setbg="">
-        <div class="container">
-            <div class="footer-text">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="footer-logo">
-                            <div class="logo">
-                                <a href="#"><img src="icone/mon-lo.png" alt=""></a>
-                            </div>
-                            <p>Souscrivez à notre newsLetter</p>
-                            <form action="#" class="newslatter-form">
-                            <div class="form-row">
-                              <input style="width:150px" class="form-control col-md-5" type="text" placeholder="Enter your email...">
-                                <button class="btn btn-danger " type="submit"><i class="glyphicon glyphicon-send"></i></button>
-                            </div>
-                                
-                            </form>
-                        </div>
+    <!-- reservons -->
+    <div class="reservons">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+
+          </div>
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <div class="row">
+                    <div class="form-group col-lg-4">
+                        <label for="inputEmail4">Nom</label>
+                        <input name="nom" type="text" class="form-control" id="inputEmail4" placeholder="" required="">
                     </div>
-                    <div class="col-lg-3 offset-lg-1">
-                        <div class="footer-widget">
-                            <h4>Liens</h4>
-                            <ul>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Accueil</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Natation</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Spa</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Hôtel</a></li>
-                            </ul>
-                            <ul>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">competition</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Enfant</a></li>
-                                
-                            </ul>
-                        </div>
+                    <div class="form-group col-lg-4">
+                        <label for="inputEmail4">Prénoms</label>
+                        <input name="prenom" type="text" class="form-control" id="inputEmail4" placeholder="" required="">
                     </div>
-                    <div class="col-lg-2">
-                        <div class="footer-widget">
-                            <h4>Réseaux sociaux</h4>
-                            <ul class="social">
-                                <li><i class="ti-facebook"></i> <a href="#">Facebook</a></li>
-                                <li><i class="ti-instagram"></i> <a href="#">Instagram</a></li>
-                                <li><i class="ti-twitter-alt"></i> <a href="#">Twitter</a></li>
-                                <li><i class="ti-google"></i> <a href="#">Google+</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="footer-widget">
-                            <h4>Contactez nous</h4>
-                            <ul class="contact-option">
-                                <li><i class="glyphicon glyphicon-map-marker"></i> Cocody Riviera 2</li>
-                                <li><i class="glyphicon glyphicon-phone"></i> (+225) 44554755</li>
-                                <li><i class="glyphicon glyphicon-envelope"></i> yediminh@gmail.com</li>
-                                
-                            </ul>
-                        </div>
+                    <div class="form-group col-lg-4">
+                        <label for="inputEmail4">Civilité</label>
+                        <select name="civilite" class="form-control">
+                            <option>Mr</option>
+                            <option>Mme</option>
+                            
+                        </select>
                     </div>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="form-group col-lg-4">
+                        <label for="inputEmail4">Mail</label>
+                        <input name="mail" type="text" class="form-control" id="inputEmail4" placeholder="" required="">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="inputEmail4">Contact</label>
+                        <input name="contact" type="number" class="form-control" id="inputEmail4" placeholder="" required="">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="inputEmail4">Personnes</label>
+                        <select name="personne" class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>Famille</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-lg-4">
+                        <label for="inputEmail4">Reservation</label>
+                        <select name="reservation" class="form-control">
+                            <option>Complète</option>
+                            <option>Mini</option>
+                            
+                        </select>
+                        
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="inputEmail4">Début Séjour</label>
+                        <input name="debut" type="date" class="form-control" id="inputEmail4" placeholder="" required="">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="inputEmail4">Fin Séjour</label>
+                        <input name="fin" type="date" class="form-control" id="inputEmail4" placeholder="" required="">
+                    </div>
+                    
+                </div>
+                <div class="form-group ">
+                    <input class="btn btn-primary " type="submit" name="ok" id="">
+                </div>
+                <?php
+								if (isset($erreur)) 
+								{
+									echo $erreur;
+								}
+							?>
+            </form>
             
+          </div>
         </div>
-    </footer>
-                      
+      </div>
+    </div>
+    <div class="separateur"></div>
+    <!-- fin natation -->
+    <!-- formation-form -->
+    
+    <!-- Fin form -->
+    <!-- autres -->
+    
+    <!-- fin autres -->
+    <!-- Footer -->
 
-    <!--  -->
+    <footer class="footer footer-inverse">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3">
+                  <div class="footer-logo">
+                      <div class="logo">
+                          <a href="#"><img src="icones/mon-lo.png" alt=""></a>
+                      </div>
+                      <p>Souscrivez à notre newsletter pour avoir des notifications.</p>
+                      <form action="#" class="newslatter-form">
+                          <input class="form-control" type="text" placeholder="Enter your email...">
+                          <button class="btn btn-danger" type="submit"><span style="color:#fff; " class="glyphicon glyphicon-send"></span></button>
+                      </form>
+                  </div>
+              </div>
+              <div class="col-lg-3 offset-lg-1">
+                  <div class="footer-widget">
+                      <h4>Nos Liens</h4>
+                      <ul id="lien">
+                          <li> <a href="accueil.php">Accueil</a></li>
+                          <li> <a href="natation.php">Natation</a></li>
+                          <li> <a href="restaurant.php">Restaurant</a></li>
+                          <li> <a href="hotel.php">Hôtel</a></li>
+                      </ul>
+                      <ul id="lien">
+                          <li> <a href="spa.php">Spa</a></li>
+                          <li> <a href="news.php">Actus-News</a></li>
+                          <li> <a href="galerie.php">Galerie</a></li>
+                          <li> <a href="reservation.php">Reservation</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-2">
+                  <div class="footer-widget">
+                      <h4>Réseaux sociaux</h4>
+                      <ul class="social">
+                          <li><i class="fa fa-facebook"></i> <a href="#">Facebook</a></li>
+                          <li><i class="ti-instagram"></i> <a href="#">Instagram</a></li>
+                          <li><i class="fa fa-github"></i> <a href="#">Github</a></li>
+                          
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-3">
+                  <div class="footer-widget">
+                      <h4>Contactez Nous</h4>
+                      <ul class="contact-option">
+                          <li><i class="fa fa-map-marker"></i> Riviera 2 || Cocody - Abijan</li>
+                          <li><i class="fa fa-phone"></i> (+225) 78 34 27 09</li>
+                          <li><i class="fa fa-envelope"></i> info.yediminh@gmail.com</li>
+                          
+                      </ul>
+                  </div>
+              </div>
+                
+          </div>
+      </div>
+    </footer>
+
+    <!-- fin Footer -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="dist/js/bootstrap.min.js"></script>

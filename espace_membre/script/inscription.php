@@ -1,5 +1,5 @@
 <?php
-require 'config.php';
+require '../includes/database.php';
 
 if (isset($_POST['ok'])) 
 {
@@ -28,7 +28,7 @@ if (isset($_POST['ok']))
 						$reqMembre = $bdd->prepare("INSERT INTO membres(pseudo,mail,motdepasse,avatar) VALUES(?,?,?,'default.jpg')");
 						$reqMembre->execute(array($pseudo,$mail1,$mdp1));
 
-						$msg = "Enregistrement effectué avec succès! <a style='color:blue' href='connexion.php'>Se connecter?</a>";
+						$msg = "Enregistrement effectué avec succès! <a style='color:blue' href='index.php'>Se connecter?</a>";
 					}
 					else
 					{

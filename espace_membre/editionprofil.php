@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require 'script/config.php';
+require '../includes/database.php';
 
  $requser=$bdd->prepare("SELECT * FROM membres WHERE id=?");
  
