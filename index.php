@@ -205,7 +205,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="service_item">
                             <h4 class=""><img class="animated infinite pulse" src="icones/room.png" alt="">  Hôtel</h4>
-                            <p>Offre vous des semaines de bonheur partagé dans nos chambres de qualité.</p>
+                            <p>Offrez vous des semaines de bonheur partagé dans nos chambres de qualité.</p>
                             <a class="btn btn-danger" href="natation.php">Voir plus</a>
                         </div>
                     </div>
