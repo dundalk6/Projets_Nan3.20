@@ -1,5 +1,5 @@
 <?php
 
-$bdd = NEW PDO("mysql:host=127.0.0.1;dbname=projet_yedimin","root","");
+$bdd = NEW PDO("mysql:host=51.77.197.184;dbname=student_yedimin","adminer","N@Np2020#");
 
 ?>
