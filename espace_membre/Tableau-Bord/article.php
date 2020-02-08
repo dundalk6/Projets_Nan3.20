@@ -47,11 +47,8 @@ if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
                                         
                                         <div class="form-group">
                                             <label for="inputEmail4">Description</label>
-                                            <textarea name="article_contenu" type="text" class="form-control" id="inputAddress" required="">
-                                                <?php if ($mode_edition == 1) {?>  
-                                                <?= $edit_article['contenu']?><?php } ?>
-                                            </textarea>
-                                    
+                                            <textarea name="article_contenu" type="text" class="form-control" id="inputAddress" required=""><?php if ($mode_edition == 1) {?><?= $edit_article['contenu']?><?php } ?></textarea>
+                                              
                                         </div>
                                     
                                         <?php if ($mode_edition == 0) {?>

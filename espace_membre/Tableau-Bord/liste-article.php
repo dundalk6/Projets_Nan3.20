@@ -102,8 +102,8 @@ if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
                                             <td><img src="miniatures/<?=$l['id'] ?>" width="150" height="100"></td>
                                             
                                             <td style="padding-top: 50px">
-                                                <a class="btn btn-primary btn-out-dotted" href="article.php?edit=<?=$l['id'] ?>"><span class="fa fa-edit">Modifier</span></a>
-                                                <a href="liste-article.php?supprime=<?=$l['id'] ?>"class="btn btn-danger btn-out-dotted"><span class="ti-trash">Supprimer</span></a>
+                                                <a class="btn btn-primary btn-out-dotted" href="article.php?id=<?php echo $_SESSION['id']?>&edit=<?=$l['id'] ?>"><span class="fa fa-edit">Modifier</span></a>
+                                                <a href="liste-article.php?id=<?php echo $_SESSION['id']?>&supprime=<?=$l['id'] ?>"class="btn btn-danger btn-out-dotted"><span class="ti-trash">Supprimer</span></a>
                                             </td>
 
                                         </tr>
