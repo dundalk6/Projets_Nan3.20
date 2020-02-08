@@ -255,9 +255,7 @@
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                     
                     
-                      Prodigués par la spécialiste Laurence VERJUS sur rendez-vous, tous nos massages-bien-être sont destinés autant aux hommes qu’aux femmes et adaptés en conséquence.
-                      Ce moyen de ressource permet de réduire vos tensions corporelles et de diminuer favorablement votre stress.
-                      Laissez-vous tenter par la découverte, entrez dans un nouveau monde, abandonnez-vous l’espace d’un instant et laissez-vous guider… Bon voyage !  
+                      Un massage-bien-être tout en douceur des trapèzes, cou et crâne en position assise puis vous vous allongerez pour continuer par un toucher relaxant et tonifiant du visage et de la tête. Ce massage-bien-être apporte relâchement intérieur et sérénité. C’est une pratique ancestrale chinoise transmise de mère en fille.
                       
                     
                     
